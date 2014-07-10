@@ -1,0 +1,29 @@
+package exchangerate;
+
+import java.util.Scanner;
+
+public class ExchangeRate {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); 
+        System.out.print("Enter the exchange rate from dollars to rupees: "); 
+        double rate = input.nextDouble();
+
+        System.out.print("Enter 0 to convert dollars to rupees and 1 vice versa: "); 
+        int conversionType = input.nextInt();
+
+        if (conversionType == 0) {
+            System.out.print("Enter the dollar amount: ");
+            double dollars = input.nextDouble();
+            double rupees = dollars * rate;
+            System.out.println("$" + dollars + " is " + rupees + " Rps");
+    }
+    else if (conversionType == 1) {
+        System.out.print("Enter the rupee amount: ");
+        double rupees = input.nextDouble();
+        double dollars = rupees / rate;
+        System.out.println(rupees + " Rps" + " is " + "$" + dollars);
+        }else{
+            System.out.println("Incorrect input");
+} }
+    }
